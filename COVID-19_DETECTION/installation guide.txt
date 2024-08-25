@@ -1,0 +1,19 @@
+--environment setup--
+
+#install python-3.6 (select add to system variables)
+#install IDE Pycharm
+#Create new Project copy and paste the source code inside the project
+
+#click on terminal below and install libraries
+pip install tensorflow==2.3.2
+pip install Keras==2.4.3
+pip install matplotlib==3.3.4
+pip install numpy==1.18.5
+pip install Flask==2.0.1
+----or-----
+#go to requirements.txt file click install requirements on alert message
+
+# to train model run "train model.py"
+# to run project execute "run file.py"
+
+

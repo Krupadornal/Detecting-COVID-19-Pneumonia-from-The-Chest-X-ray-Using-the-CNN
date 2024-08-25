@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pneumonia Detection</title>
+    <script src="static/js/jquery-3.6.0.min.js"></script>
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <script src="static/js/bootstrap.min.js"></script>
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/main.js') }}" type="text/javascript"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+          <strong style="color:white;">Covid 19 severity on x-ray</strong>
+      </li>
+    </ul>
+</nav>
+<div class="container">
+    <div class="row mt-2">
+        <div class="col-lg-4">
+            <div class="img-preview" style="border: solid;">
+                <div id="imagePreview">
+                </div>
+            </div>
+            <form id="upload-file" method="post" enctype="multipart/form-data">
+                <label for="imageUpload" class="upload-label">
+                    Select Image
+                </label>
+                <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+            </form>
+        </div>
+        <div class="col-lg-4">
+            <img src="{{ url_for('static', filename = 'image/predictbutton.png') }}" style="margin-top: 20px;"  id="btn-predict">
+            <div class="loader" style="display:none;margin-top: 70px;margin-left: 30px;"></div>
+        </div>
+        <div class="col-lg-4">
+            <h3 id="result" style="margin-top: 100px;"></h3>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-lg-12">
+            <p>
+                The need to streamline patient management for COVID-19 has become more pressing
+                than ever. Chest X-rays provide a non-invasive
+                (potentially bedside) tool to monitor the progression of the disease. In this study, we present a
+                severity score prediction model for COVID-19
+                pneumonia for frontal chest X-ray images. Such a
+                tool can gauge severity of COVID-19 lung infections (and pneumonia in general) that can be used
+                for escalation or de-escalation of care as well as
+                monitoring treatment efficacy, especially in the
+                ICU.
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
